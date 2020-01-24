@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Halve Spacers on Mobile
- * Plugin URI:      https://github.com/justMoritz/halveMobileSpacers
+ * Plugin URI:      https://github.com/justMoritz/halve-spacers-on-mobile
  * Description:     Takes the every Wordpress Gutenberg Spacer Block and halves it on mobile
  * Author:          Moritz Zimmer
  * Author URI:      https://www.moritzzimmer.com
@@ -94,7 +94,7 @@ class Maz_hspm_Fields_Plugin {
         <form method="post" action="options.php">
           <br>
           <hr>
-          <br>You can configure the screen width in pixels when the spacers change size.
+          <br>Breakpoint configures the screen width in pixels when the spacers change size.
           <br>Ratio defines the amount of change. For example, 0.5 will halve the size, 2 will double it.
           <br>
 
