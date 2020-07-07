@@ -3,11 +3,12 @@
     "type"       : "wordpress-plugin",
     "description": "Halve Spacers On Mobile",
     "require"    : {
-    "composer/installers": "~1.0",
+        "composer/installers": "~1.0"
+    },
     "authors": [
-    {
-          "name": "Moritz Zimmer",
-          "email": "moritzzimmer@moritzzimmer.com"
-      }
+        {
+            "name": "Moritz Zimmer",
+            "email": "moritzzimmer@moritzzimmer.com"
+        }
     ]
 }
