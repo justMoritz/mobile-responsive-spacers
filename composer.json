@@ -3,18 +3,18 @@
   "description": "My Package Description",
   "license": "GPL-3.0",
   "autoload": {
-    "classmap": [ // search these directories for classes 
+    "classmap": [
       "lib/"
     ]
   },
   "repositories": {
-    "php-console-color": { // pseudonym of git repo
+    "php-console-color": {
       "type": "package",
       "package": {
-        "name": "justMoritz/halve-spacers-on-mobile",  // name of git repo
+        "name": "justMoritz/halve-spacers-on-mobile",
         "version": "1.0.0",
         "source": {
-          "url": "https://github.com/justMoritz/halve-spacers-on-mobile.git", // url to repo
+          "url": "https://github.com/justMoritz/halve-spacers-on-mobile.git",
           "type": "git", // vcs or git
           "reference": "origin/master"
         }
