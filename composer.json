@@ -1,27 +1,13 @@
 {
-  "name": "my_vendor_name/my_package",
-  "description": "My Package Description",
-  "license": "GPL-3.0",
-  "autoload": {
-    "classmap": [
-      "lib/"
-    ]
-  },
-  "repositories": {
-    "php-console-color": {
-      "type": "package",
-      "package": {
-        "name": "justMoritz/halve-spacers-on-mobile",
-        "version": "1.0.0",
-        "source": {
-          "url": "https://github.com/justMoritz/halve-spacers-on-mobile.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
+    "name"       : "justMoritz/halve-spacers-on-mobile",
+    "type"       : "wordpress-plugin",
+    "description": "Halve Spacers On Mobile",
+    "require"    : {
+    "composer/installers": "~1.0",
+    "authors": [
+    {
+          "name": "Moritz Zimmer",
+          "email": "moritzzimmer@moritzzimmer.com"
       }
-    }
-  },
-  "require": {
-    "justMoritz/halve-spacers-on-mobile":"1.0.0" 
-  }
+    ]
 }
