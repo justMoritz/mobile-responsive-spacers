@@ -7,7 +7,7 @@
  * Author URI:      https://www.moritzzimmer.com
  * Text Domain:     halve-spacers-on-mobile
  * Domain Path:     /languages
- * Version:         1.0.0
+ * Version:         1.0.4
  *
  * @package         halve-spacers-on-mobile
  */
@@ -123,14 +123,13 @@ new Maz_hspm_Fields_Plugin();
 function maz_halve_spacers_on_mobile_init() {
   global $gloablVersion;
 
-  wp_enqueue_script( 'mazHspmVars_handler', 'path-to-file', array( 'jquery' ) );
   $phpInfo = array(
     'breakpoint' => get_option( 'maz_hspm_breakpoint' ),
     'ratio' => get_option( 'maz_hspm_ratio' )
   );
-  wp_localize_script( 'mazHspmVars_handler', 'mazHspmVars', $phpInfo );
 
   wp_enqueue_script('maz_hspm_scripts', plugin_dir_url( __FILE__ ) . 'assets/halve-spacers-on-mobile.js', ['jquery'], $gloablVersion, true);
+  wp_localize_script( 'maz_hspm_scripts', 'mazHspmVars', $phpInfo );
 }
 add_action('wp_enqueue_scripts', 'maz_halve_spacers_on_mobile_init');
 
