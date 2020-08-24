@@ -13,7 +13,7 @@
  */
 
 
-$gloablVersion = "1.0.0";
+$gloablVersion = "1.0.4";
 
 
 class Maz_hspm_Fields_Plugin {
