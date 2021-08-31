@@ -1,7 +1,7 @@
 {
-    "name"       : "justMoritz/halve-spacers-on-mobile",
+    "name"       : "justMoritz/mobile-responsive-spacers",
     "type"       : "wordpress-plugin",
-    "description": "Halve Spacers On Mobile",
+    "description": "Mobile Responsive Spacers",
     "require"    : {
         "composer/installers": "~1.0"
     },
