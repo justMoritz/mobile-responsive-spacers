@@ -7,13 +7,13 @@
  * Author URI:      https://www.moritzzimmer.com
  * Text Domain:     mobile-responsive-spacers
  * Domain Path:     /languages
- * Version:         1.0.5
+ * Version:         1.1.0
  *
  * @package         mobile-responsive-spacers
  */
 
 
-$gloablVersion = "1.0.5";
+$gloablVersion = "1.1.0";
 
 
 class Maz_Mrs_Fields_Plugin {
