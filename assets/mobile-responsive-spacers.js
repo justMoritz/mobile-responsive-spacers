@@ -1,12 +1,11 @@
-var halveSpacersOnMobile = (function($){
+var halveSpacersOnMobile = (function(){
 
   var ratio, breakpoint;
 
-  var _maxMrsElem = {
-    blocks: document.querySelectorAll('.wp-block-spacer'),
+  var __maxMrsElem = {
+    blocks: document.querySelectorAll(".wp-block-spacer"),
   };
 
-  console.log(_maxMrsElem.blocks)
 
   /**
    * Helper Function:
@@ -15,32 +14,17 @@ var halveSpacersOnMobile = (function($){
    */
   __resizeHelper = function(){
 
-    for(var bi = 0; bi < _maxMrsElem.blocks.length; bi++){
-      var $this = _maxMrsElem.blocks[bi];
+    for(var bi = 0; bi < __maxMrsElem.blocks.length; bi++){
+      var $this = __maxMrsElem.blocks[bi];
 
-      if( $(window).width() < breakpoint ){
-        calcHeight = $this.getAttribute('data-originalheight')*ratio+'px';
+      if( window.innerWidth < breakpoint ){
+        calcHeight = $this.getAttribute("data-originalheight")*ratio+"px";
       }
       else{
-        calcHeight = $this.getAttribute('data-originalheight')+'px';
+        calcHeight = $this.getAttribute("data-originalheight")+"px";
       }
       $this.style.setProperty("height", calcHeight, "important");
     }
-
-    // $('.wp-block-spacer').each(function(){
-    //   var $this = $(this);
-
-    //   if( $(window).width() < breakpoint ){
-    //     calcHeight = $this.attr('data-originalheight')*ratio+'px';
-    //     mazMrsHeightString = 'height: '+$this.attr('data-originalheight')*ratio+'px !important;';
-    //   }
-    //   else{
-    //     calcHeight = $this.attr('data-originalheight')+'px';
-    //     mazMrsHeightString = 'height: '+$this.attr('data-originalheight')+'px !important;';
-    //   }
-    //   $this[0].style.setProperty("height", calcHeight, "important");
-    //   // $this.css({ 'cssText', mazMrsHeightString });
-    // });
   };
 
   /**
@@ -52,13 +36,14 @@ var halveSpacersOnMobile = (function($){
     breakpoint = mazMrsVars.breakpoint || 768;
 
     // writes current CSS height sans pixels data-attribute for each wp-block-spacer
-    $('.wp-block-spacer').each(function(){
-      var currentHeight = parseFloat( $(this).css('height') );
-      $(this).attr('data-originalheight', currentHeight);
-    });
+    for(var si = 0; si < __maxMrsElem.blocks.length; si++){
+      var $this = __maxMrsElem.blocks[si],
+          currentHeight = parseFloat( $this.offsetHeight );
+      $this.setAttribute('data-originalheight', currentHeight);
+    }
 
     // then creates a single resize listener, which triggers the helper function
-    $(window).on('resize', function(){
+    window.addEventListener("resize", function(){
       __resizeHelper();
     });
 
@@ -77,4 +62,4 @@ var halveSpacersOnMobile = (function($){
     init: init,
   };
 
-})(jQuery);
+})();
