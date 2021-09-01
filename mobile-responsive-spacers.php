@@ -7,13 +7,13 @@
  * Author URI:      https://www.moritzzimmer.com
  * Text Domain:     mobile-responsive-spacers
  * Domain Path:     /languages
- * Version:         1.2.0
+ * Version:         1.2.1
  *
  * @package         mobile-responsive-spacers
  */
 
 
-$gloablVersion = "1.2.0";
+$gloablVersion = "1.2.1";
 
 
 class Maz_Mrs_Plugin {
@@ -123,7 +123,7 @@ class Maz_Mrs_Plugin {
         ?>
       </form>
       <div class="">
-        A Plugin by <a href="https://moritzzimmer.com"> Moritz Zimmer </a>, <?php echo esc_html(Date("Y") )?>
+        A Plugin by <a href="https://moritzzimmer.com">Moritz Zimmer</a>, <?php echo esc_html(Date("Y") )?>
       </div>
     </div>
   <?php
@@ -143,7 +143,7 @@ function maz_halve_spacers_on_mobile_init() {
     "ratio" => esc_attr( get_option( "maz_mrs_ratio" ) )
   );
 
-  wp_enqueue_script( "maz_mrs_scripts", plugin_dir_url( __FILE__ ) . "assets/mobile-responsive-spacers.js", ["jquery"], $gloablVersion, true );
+  wp_enqueue_script( "maz_mrs_scripts", plugin_dir_url( __FILE__ ) . "assets/mobile-responsive-spacers.js", [], $gloablVersion, true );
   wp_localize_script( "maz_mrs_scripts", "mazMrsVars", $vars_from_php );
 }
 add_action("wp_enqueue_scripts", "maz_halve_spacers_on_mobile_init");
