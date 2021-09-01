@@ -4,7 +4,7 @@ Tags: spacers, halve spacers, adjust spacers, responsive spacers, mobile spacers
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
