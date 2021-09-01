@@ -16,7 +16,7 @@
 $gloablVersion = "1.1.1";
 
 
-class Maz_Mrs_Fields_Plugin {
+class Maz_Mrs_Plugin {
 
   /**
    * Hooks used below
@@ -130,7 +130,7 @@ class Maz_Mrs_Fields_Plugin {
   }
 }
 
-new Maz_Mrs_Fields_Plugin();
+new Maz_Mrs_Plugin();
 
 
 
